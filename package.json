@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/GatyzkayaGeka/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^9.5.0"
+    "commander": "^9.5.0",
+    "readline-sync": "^1.4.10"
   }
 }
