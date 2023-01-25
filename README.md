@@ -7,6 +7,7 @@
 ### Test Coverage Badge
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5ca4c019eabe100a5092/test_coverage)](https://codeclimate.com/github/GatyzkayaGeka/frontend-project-46/test_coverage)
 
+### Github actions
 
 
 ### Сравнение плоских файлов (JSON)
