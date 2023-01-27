@@ -7,4 +7,10 @@ link:       #Установка пакетов
 lint:		#Проверка линтером
 	npx eslint .
 
+test:
+		npm test
+
+test-coverage:
+		npm test -- --coverage --coverageProvider=v8
+
 
