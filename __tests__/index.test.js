@@ -15,7 +15,6 @@ const filejson2 = getFixturePath('file2.json');
 const expectedResultStylish = readFile('resultStylish.txt');
 // const expectedResultPlain = readFile('resultPlain.txt');
 
-
 test('check json stylish format', () => {
   const expected = expectedResultStylish.trim();
   const actual = genDiff(filejson1, filejson2, 'stylish');
@@ -23,21 +22,21 @@ test('check json stylish format', () => {
 });
 
 // test('check plain format', () => {
-  // const expected = expectedResultPlain.trim();
-  // const actual = genDiff(filejson1, filejson2, 'plain');
-  // expect(actual).toEqual(expected);
+// const expected = expectedResultPlain.trim();
+// const actual = genDiff(filejson1, filejson2, 'plain');
+// expect(actual).toEqual(expected);
 // });
 
 // test('check json format', () => {
-  // const expected = expectedResultJson.trim();
-  // const actual = genDiff(filejson1, filejson2, 'json');
-  // expect(actual).toEqual(expected);
+// const expected = expectedResultJson.trim();
+// const actual = genDiff(filejson1, filejson2, 'json');
+// expect(actual).toEqual(expected);
 // });
 
 // test('unkown format', () => {
-  // const error = new Error("This format is not supported: '.txt'. Please read the documentation and use the available formats");
+// const error = new Error("This format is not supported: '.txt'. Please read the documentation and use the available formats");
 
-  // expect(() => {
-    // genDiff(filejson1, filejson2, 'txt');
-  // }).toThrow(error);
+// expect(() => {
+// genDiff(filejson1, filejson2, 'txt');
+// }).toThrow(error);
 // });
