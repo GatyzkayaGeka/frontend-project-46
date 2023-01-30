@@ -12,3 +12,7 @@
 
 ### Сравнение плоских файлов (JSON)
 [![asciicast](https://asciinema.org/a/lZuw40YB2Qv1kK99eOy31yui1.svg)](https://asciinema.org/a/lZuw40YB2Qv1kK99eOy31yui1)
+
+
+### Сравнение плоских файлов (YAML)
+[![asciicast](https://asciinema.org/a/555752.svg)](https://asciinema.org/a/555752)

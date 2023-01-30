@@ -24,7 +24,7 @@ test('check json stylish format', () => {
 
 test('check yml and yaml stylish format', () => {
   const expected = expectedResultStylish.trim();
-  const actual = genDiff(getFixturePath('file1.yml'), getFixturePath('file2.yaml'), 'stylish');
+  const actual = genDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'), 'stylish');
   expect(actual).toEqual(expected);
 });
 
