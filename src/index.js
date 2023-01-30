@@ -1,12 +1,23 @@
 import path from 'path';
-import _ from 'lodash';
 import treeDiff from './chowDiff.js';
 import readFile from './seeFile.js';
 import stylish from './stringify.js';
+import parser from './parsers.js';
 
-const genDiff = (filepath1, filepath2) => {
-  const content1 = readFile(filepath1);
-  const content2 = readFile(filepath2);
+const getFileData = (filepath) => {
+  const fileData = readFile(filepath);
+  const fileFormat = path.extname(filepath);
+  if (fileFormat[0] === '.') {
+    fileFormat.slice(1);
+  }
+  const parsedData = parser(fileData, fileFormat);
+
+  return parsedData;
+};
+
+const genDiff = (filepath1, filepath2, format = 'stylish') => {
+  const content1 = getFileData(filepath1);
+  const content2 = getFileData(filepath2);
 
   const difference = treeDiff(content1, content2);
   const result = stylish(difference);

@@ -11,13 +11,20 @@ const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8'
 
 const filejson1 = getFixturePath('file1.json');
 const filejson2 = getFixturePath('file2.json');
-/// const expectedResultJson = readFile('resultJson.txt');
+
 const expectedResultStylish = readFile('resultStylish.txt');
+/// const expectedResultJson = readFile('resultJson.txt');
 // const expectedResultPlain = readFile('resultPlain.txt');
 
 test('check json stylish format', () => {
   const expected = expectedResultStylish.trim();
   const actual = genDiff(filejson1, filejson2, 'stylish');
+  expect(actual).toEqual(expected);
+});
+
+test('check yml and yaml stylish format', () => {
+  const expected = expectedResultStylish.trim();
+  const actual = genDiff(getFixturePath('file1.yml'), getFixturePath('file2.yaml'), 'stylish');
   expect(actual).toEqual(expected);
 });
 
