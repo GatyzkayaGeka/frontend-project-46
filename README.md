@@ -16,3 +16,10 @@
 
 ### Сравнение плоских файлов (YAML)
 [![asciicast](https://asciinema.org/a/555752.svg)](https://asciinema.org/a/555752)
+
+
+### Рекурсивное сравнение
+[![asciicast](https://asciinema.org/a/556534.svg)](https://asciinema.org/a/556534)
+
+### Плоский формат
+[![asciicast](https://asciinema.org/a/556544.svg)](https://asciinema.org/a/556544)

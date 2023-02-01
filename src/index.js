@@ -1,9 +1,9 @@
 import path from 'path';
 import treeDiff from './chowDiff.js';
 import readFile from './seeFile.js';
-import stylish from './form/stringify.js';
+import stylish from './formatters/stringify.js';
 import parser from './parsers.js';
-import formatters from './form/index.js';
+import formatters from './formatters/index.js';
 
 const getFileData = (filepath) => {
   const fileData = readFile(filepath);
@@ -21,7 +21,7 @@ const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const content2 = getFileData(filepath2);
 
   const difference = treeDiff(content1, content2);
-  const result = stylish(difference);
+  const result = formatters(difference, formatName);
 
   return result;
 };

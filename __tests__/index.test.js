@@ -14,7 +14,7 @@ const filejson2 = getFixturePath('file2.json');
 
 const expectedResultStylish = readFile('resultStylish.txt');
 /// const expectedResultJson = readFile('resultJson.txt');
-// const expectedResultPlain = readFile('resultPlain.txt');
+const expectedResultPlain = readFile('resultPlain.txt');
 
 test('check json stylish format', () => {
   const expected = expectedResultStylish.trim();
@@ -28,11 +28,11 @@ test('check yml and yaml stylish format', () => {
   expect(actual).toEqual(expected);
 });
 
-// test('check plain format', () => {
-// const expected = expectedResultPlain.trim();
-// const actual = genDiff(filejson1, filejson2, 'plain');
-// expect(actual).toEqual(expected);
-// });
+test('check plain format', () => {
+  const expected = expectedResultPlain.trim();
+  const actual = genDiff(filejson1, filejson2, 'plain');
+  expect(actual).toEqual(expected);
+});
 
 // test('check json format', () => {
 // const expected = expectedResultJson.trim();
