@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675420186110" clover="3.2.0">
-  <project timestamp="1675420186110" name="All files">
-    <metrics statements="82" coveredstatements="77" conditionals="42" coveredconditionals="35" methods="19" coveredmethods="19" elements="143" coveredelements="131" complexity="0" loc="82" ncloc="82" packages="2" files="7" classes="7"/>
+<coverage generated="1675421173350" clover="3.2.0">
+  <project timestamp="1675421173350" name="All files">
+    <metrics statements="80" coveredstatements="75" conditionals="42" coveredconditionals="35" methods="19" coveredmethods="19" elements="141" coveredelements="129" complexity="0" loc="80" ncloc="80" packages="2" files="7" classes="7"/>
     <package name="src">
-      <metrics statements="37" coveredstatements="35" conditionals="17" coveredconditionals="13" methods="7" coveredmethods="7"/>
+      <metrics statements="35" coveredstatements="33" conditionals="17" coveredconditionals="13" methods="7" coveredmethods="7"/>
       <file name="chowDiff.js" path="/root/frontend-project-46/src/chowDiff.js">
         <metrics statements="15" coveredstatements="15" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
@@ -23,7 +23,7 @@
         <line num="25" count="12" type="stmt"/>
       </file>
       <file name="index.js" path="/root/frontend-project-46/src/index.js">
-        <metrics statements="15" coveredstatements="15" conditionals="3" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="8" type="stmt"/>
         <line num="10" count="8" type="stmt"/>
@@ -36,9 +36,7 @@
         <line num="21" count="4" type="stmt"/>
         <line num="23" count="4" type="stmt"/>
         <line num="24" count="4" type="stmt"/>
-        <line num="25" count="4" type="stmt"/>
         <line num="26" count="4" type="stmt"/>
-        <line num="28" count="4" type="stmt"/>
       </file>
       <file name="parsers.js" path="/root/frontend-project-46/src/parsers.js">
         <metrics statements="5" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>

@@ -10,6 +10,16 @@
 ### Github actions
 [![learn-github-actions](https://github.com/GatyzkayaGeka/frontend-project-46/actions/workflows/githubActions.yml/badge.svg)](https://github.com/GatyzkayaGeka/frontend-project-46/actions/workflows/githubActions.yml)
 
+## Описание
+Вычислитель отличий – программа, определяющая разницу между двумя структурами данных. Это популярная задача, для решения которой существует множество онлайн сервисов, например http://www.jsondiff.com/. Подобный механизм используется при выводе тестов или при автоматическом отслеживании изменении в конфигурационных файлах.
+
+#### Возможности утилиты:
+
+Поддержка разных входных форматов: yaml, json
+Генерация отчета в виде plain text, stylish и json
+
+
+
 ### Сравнение плоских файлов (JSON)
 [![asciicast](https://asciinema.org/a/lZuw40YB2Qv1kK99eOy31yui1.svg)](https://asciinema.org/a/lZuw40YB2Qv1kK99eOy31yui1)
 
@@ -23,3 +33,6 @@
 
 ### Плоский формат
 [![asciicast](https://asciinema.org/a/556544.svg)](https://asciinema.org/a/556544)
+
+### Вывод в json
+[![asciicast](https://asciinema.org/a/557156.svg)](https://asciinema.org/a/557156)
