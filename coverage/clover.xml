@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675421173350" clover="3.2.0">
-  <project timestamp="1675421173350" name="All files">
-    <metrics statements="80" coveredstatements="75" conditionals="42" coveredconditionals="35" methods="19" coveredmethods="19" elements="141" coveredelements="129" complexity="0" loc="80" ncloc="80" packages="2" files="7" classes="7"/>
+<coverage generated="1675715756471" clover="3.2.0">
+  <project timestamp="1675715756471" name="All files">
+    <metrics statements="79" coveredstatements="73" conditionals="40" coveredconditionals="34" methods="19" coveredmethods="19" elements="138" coveredelements="126" complexity="0" loc="79" ncloc="79" packages="2" files="7" classes="7"/>
     <package name="src">
-      <metrics statements="35" coveredstatements="33" conditionals="17" coveredconditionals="13" methods="7" coveredmethods="7"/>
-      <file name="chowDiff.js" path="/root/frontend-project-46/src/chowDiff.js">
+      <metrics statements="34" coveredstatements="31" conditionals="15" coveredconditionals="12" methods="7" coveredmethods="7"/>
+      <file name="index.js" path="/root/frontend-project-46/src/index.js">
+        <metrics statements="11" coveredstatements="11" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+      </file>
+      <file name="parsers.js" path="/root/frontend-project-46/src/parsers.js">
+        <metrics statements="6" coveredstatements="3" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="8" type="cond" truecount="1" falsecount="3"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="readFile.js" path="/root/frontend-project-46/src/readFile.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
+      </file>
+      <file name="treeDiff.js" path="/root/frontend-project-46/src/treeDiff.js">
         <metrics statements="15" coveredstatements="15" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="20" type="stmt"/>
@@ -21,35 +49,6 @@
         <line num="20" count="28" type="cond" truecount="2" falsecount="0"/>
         <line num="21" count="16" type="stmt"/>
         <line num="25" count="12" type="stmt"/>
-      </file>
-      <file name="index.js" path="/root/frontend-project-46/src/index.js">
-        <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="10" count="8" type="stmt"/>
-        <line num="11" count="8" type="cond" truecount="1" falsecount="1"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="14" count="8" type="stmt"/>
-        <line num="16" count="8" type="stmt"/>
-        <line num="19" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
-        <line num="23" count="4" type="stmt"/>
-        <line num="24" count="4" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
-      </file>
-      <file name="parsers.js" path="/root/frontend-project-46/src/parsers.js">
-        <metrics statements="5" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="8" type="cond" truecount="2" falsecount="2"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-      </file>
-      <file name="seeFile.js" path="/root/frontend-project-46/src/seeFile.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="4" count="8" type="stmt"/>
-        <line num="5" count="8" type="stmt"/>
       </file>
     </package>
     <package name="src.formatters">

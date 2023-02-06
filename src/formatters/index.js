@@ -1,7 +1,7 @@
 import stylish from './stringify.js';
 import plain from './plain.js';
 
-const formatters = (difference, formatName) => {
+const formatte = (difference, formatName) => {
   switch (formatName) {
     case 'stylish':
       return stylish(difference);
@@ -14,4 +14,4 @@ const formatters = (difference, formatName) => {
   }
 };
 
-export default formatters;
+export default formatte;
