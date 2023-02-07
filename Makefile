@@ -8,9 +8,9 @@ lint:		#Проверка линтером
 	npx eslint .
 
 test:
-		npm run test
+		NODE_OPTIONS=--experimental-vm-modules npx jest
 
 test-coverage:
-		npm run coverage
+		NODE_OPTIONS=--experimental-vm-modules npx jest --coverage
 
 
