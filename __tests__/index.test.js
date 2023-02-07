@@ -42,34 +42,7 @@ test.each([
   },
 
 ])('gendiff %s, %s', ({
-  a, b, format, expectresult
+  a, b, format, expectresult,
 }) => {
   expect(genDiff(a, b, format)).toBe(expectresult);
 });
-
-
-
-
-//test('check json stylish format', () => {
-  //const expected = expectedResultStylish.trim();
-  //const actual = genDiff(filejson1, filejson2, 'stylish');
-  //expect(actual).toEqual(expected);
-//});
-
-//test('check yml and yaml stylish format', () => {
-  //const expected = expectedResultStylish.trim();
-  //const actual = genDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'), 'stylish');
-  //expect(actual).toEqual(expected);
-//});
-
-//test('check plain format', () => {
-  //const expected = expectedResultPlain.trim();
-  //const actual = genDiff(filejson1, filejson2, 'plain');
-  //expect(actual).toEqual(expected);
-//});
-
-//test('check json format', () => {
-  //const expected = expectedResultJson.trim();
- //const actual = genDiff(filejson1, filejson2, 'json');
- // expect(actual).toEqual(expected);
-//});
