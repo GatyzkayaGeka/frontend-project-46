@@ -10,27 +10,29 @@ const stringify = (value) => {
   return String(value);
 };
 
+const getPath = (ancestry, name) => [...ancestry, name].join('.');
 const plain = (diff) => {
   const iter = (tree, ancestry) => tree.flatMap((node) => {
-    const prop = [...ancestry, node.name].join('.');
+    const {
+      key, value, oldValue, newValue, children, status,
+    } = node;
 
     switch (node.status) {
       case 'added':
-        return `Property '${prop}' was added with value: ${stringify(node.value)}`;
+        return `Property '${getPath(ancestry, key)}' was added with value: ${stringify(value)}`;
       case 'removed':
-        return `Property '${prop}' was removed`;
+        return `Property '${getPath(ancestry, key)}' was removed`;
       case 'updated':
-        return `Property '${prop}' was updated. From ${stringify(node.oldValue)} to ${stringify(node.newValue)}`;
+        return `Property '${getPath(ancestry, key)}' was updated. From ${stringify(oldValue)} to ${stringify(newValue)}`;
       case 'unchanged':
         return [];
       case 'nested':
-        return `${iter(node.children, [prop]).join('\n')}`;
+        return iter(children, [getPath(ancestry, key)]);
       default:
         throw new Error(`Unkown status: ${node.status}`);
     }
   });
-  const diffPlain = iter(diff, []);
-  return [...diffPlain].join('\n');
+  return iter(diff, []).join('\n');
 };
 
 export default plain;

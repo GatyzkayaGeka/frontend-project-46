@@ -14,35 +14,31 @@ const filejson2 = getFixturePath('file2.json');
 const fileyaml1 = getFixturePath('file1.yml');
 const fileyaml2 = getFixturePath('file2.yml');
 
-const expectedResultStylish = readFile('resultStylish.txt').trim();
-const expectedResultJson = readFile('resultJson.txt').trim();
-const expectedResultPlain = readFile('resultPlain.txt').trim();
-
 test.each([
   {
-    a: filejson1, b: filejson2, expectresult: expectedResultStylish,
+    file1: filejson1, file2: filejson2, expectResult: readFile('resultStylish.txt').trim(),
   },
   {
-    a: fileyaml1, b: fileyaml2, format: 'stylish', expectresult: expectedResultStylish,
+    file1: fileyaml1, file2: fileyaml2, format: 'stylish', expectResult: readFile('resultStylish.txt').trim(),
   },
   {
-    a: filejson1, b: filejson2, format: 'stylish', expectresult: expectedResultStylish,
+    file1: filejson1, file2: filejson2, format: 'stylish', expectResult: readFile('resultStylish.txt').trim(),
   },
   {
-    a: filejson1, b: filejson2, format: 'json', expectresult: expectedResultJson,
+    file1: filejson1, file2: filejson2, format: 'json', expectResult: readFile('resultJson.txt').trim(),
   },
   {
-    a: fileyaml1, b: fileyaml2, format: 'json', expectresult: expectedResultJson,
+    file1: fileyaml1, file2: fileyaml2, format: 'json', expectResult: readFile('resultJson.txt').trim(),
   },
   {
-    a: filejson1, b: filejson2, format: 'plain', expectresult: expectedResultPlain,
+    file1: filejson1, file2: filejson2, format: 'plain', expectResult: readFile('resultPlain.txt').trim(),
   },
   {
-    a: fileyaml1, b: fileyaml2, format: 'plain', expectresult: expectedResultPlain,
+    file1: fileyaml1, file2: fileyaml2, format: 'plain', expectResult: readFile('resultPlain.txt').trim(),
   },
 
 ])('gendiff %s, %s', ({
-  a, b, format, expectresult,
+  file1, file2, format, expectResult,
 }) => {
-  expect(genDiff(a, b, format)).toBe(expectresult);
+  expect(genDiff(file1, file2, format)).toBe(expectResult);
 });

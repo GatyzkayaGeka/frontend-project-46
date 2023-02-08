@@ -15,15 +15,15 @@ const stringify = (data, depth) => {
   return ['{', ...getLines, `${indent(depth)}  }`].join('\n');
 };
 
+const mark = {
+  added: '+',
+  removed: '-',
+  unchanged: ' ',
+};
+
 const stylish = (diff) => {
   const iter = (tree, depth) => tree.map((node) => {
-    const makeLine = (value, mark) => `${indent(depth)}${mark} ${node.name}: ${stringify(value, depth)}`;
-
-    const mark = {
-      added: '+',
-      removed: '-',
-      unchanged: ' ',
-    };
+    const makeLine = (value, marks) => `${indent(depth)}${marks} ${node.name}: ${stringify(value, depth)}`;
 
     switch (node.status) {
       case 'added':
