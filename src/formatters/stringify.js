@@ -24,25 +24,28 @@ const mark = {
 const stylish = (diff) => {
   const iter = (tree, depth) => tree.map((node) => {
     const makeLine = (value, marks) => `${indent(depth)}${marks} ${node.name}: ${stringify(value, depth)}`;
+    const {
+      value, oldValue, newValue, children, status, name,
+    } = node;
 
-    switch (node.status) {
+    switch (status) {
       case 'added':
-        return makeLine(node.value, mark.added);
+        return makeLine(value, mark.added);
       case 'removed':
-        return makeLine(node.value, mark.removed);
+        return makeLine(value, mark.removed);
       case 'updated':
-        return [`${makeLine(node.oldValue, mark.removed)}`,
-          `${makeLine(node.newValue, mark.added)}`].join('\n');
+        return [`${makeLine(oldValue, mark.removed)}`,
+          `${makeLine(newValue, mark.added)}`].join('\n');
       case 'unchanged':
-        return makeLine(node.value, mark.unchanged);
+        return makeLine(value, mark.unchanged);
       case 'nested':
-        return `${indent(depth)}  ${node.name}: ${[
+        return `${indent(depth)}  ${name}: ${[
           '{',
-          ...iter(node.children, depth + 1),
+          ...iter(children, depth + 1),
           `${indent(depth)}  }`,
         ].join('\n')}`;
       default:
-        throw new Error(`Unkown status: ${node.status}`);
+        throw new Error(`Unkown status: ${status}`);
     }
   });
 
