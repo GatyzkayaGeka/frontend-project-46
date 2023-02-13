@@ -23,11 +23,10 @@ const mark = {
 
 const stylish = (diff) => {
   const iter = (tree, depth) => tree.map((node) => {
-    const makeLine = (value, marks) => `${indent(depth)}${marks} ${node.name}: ${stringify(value, depth)}`;
     const {
       value, oldValue, newValue, children, status, name,
     } = node;
-
+    const makeLine = (value1, marks) => `${indent(depth)}${marks} ${name}: ${stringify(value1, depth)}`;
     switch (status) {
       case 'added':
         return makeLine(value, mark.added);

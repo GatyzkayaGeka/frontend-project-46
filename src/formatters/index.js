@@ -1,4 +1,4 @@
-import stylish from './stringify.js';
+import stylish from './stylish.js';
 import plain from './plain.js';
 
 const formatte = (difference, formatName) => {
